@@ -89,7 +89,6 @@ fi
 # https://github.com/edgeimpulse/example-standalone-inferencing/blob/master/Makefile
 printf '%s\n' \
     tflite-model/ \
-    model-parameters/ \
     edge-impulse-sdk/dsp/kissfft/*.cpp \
     edge-impulse-sdk/dsp/dct/*.cpp \
     edge-impulse-sdk/dsp/memory.cpp \
@@ -131,6 +130,7 @@ if [ "$PRJ_CMSIS_DSP" -eq 1 ]; then
         edge-impulse-sdk/CMSIS/DSP/Source/CommonTables/*.c \
         edge-impulse-sdk/CMSIS/DSP/Source/TransformFunctions/*bit*.c \
         edge-impulse-sdk/CMSIS/DSP/Source/SupportFunctions/*.c \
+        edge-impulse-sdk/CMSIS/DSP/Source/ComplexMathFunctions/*.c \
     >> "${SOURCE_LIST_FILE}"
 fi
 set -x
